@@ -23,7 +23,6 @@ VSCode Keil C51工程模板
 ## 2、修改compile.bat
 ```bash
 @echo off
-color 87
 set KEIL_BIN_FOLDER=D:\Program Files\Keil5\C51\BIN
 ```
 将KEIL_BIN_FOLDER修改为你的C51\BIN的地址
