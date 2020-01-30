@@ -1,5 +1,4 @@
 @echo off
-color 87
 set KEIL_BIN_FOLDER=D:\Program Files\Keil5\C51\BIN
 cls
 echo compiling....
