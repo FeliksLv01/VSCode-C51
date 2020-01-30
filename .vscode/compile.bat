@@ -1,6 +1,7 @@
 @echo off
 set KEIL_BIN_FOLDER=D:\Program Files\Keil5\C51\BIN
 cls
+echo author:kcqnly
 echo compiling....
 echo %1
 echo %2
