@@ -1,7 +1,6 @@
 # VSCode-C51
 VSCode Keil C51工程模板
-
-![VSCode-C51](https://ly-object-1259106193.cos.ap-chengdu.myqcloud.com/github/C51.png)
+![VSCode-C51](https://s2.ax1x.com/2020/01/30/1lLvTg.png)
 
 # 文件夹说明
 - src\ 存放代码文件
