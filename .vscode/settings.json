@@ -7,14 +7,10 @@
     "editor.suggest.localityBonus": true,
     // 这里更改为根据之前的补全进行排序
     "editor.suggestSelection": "recentlyUsed",
-    // "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "reg52.h": "c",
-        "8052.h": "c",
-        "RC522.C": "cpp",
-        "type_traits": "cpp",
         "intrins.h": "c",
-        "uart.h": "c"
+        "UART.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.clang_format_fallbackStyle": "Visual Studio"
