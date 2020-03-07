@@ -39,5 +39,3 @@ set KEIL_BIN_FOLDER=D:\Program Files\Keil5\C51\BIN
 所有的代码文件必须放到src根目录下面，
 编译时，点击终端-运行生成任务
 
-# 参考项目
-https://github.com/kenvix/VSCode-Keil-C51-Environment
