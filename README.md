@@ -2,6 +2,8 @@
 VSCode Keil C51工程模板
 ![VSCode-C51](https://s2.ax1x.com/2020/01/30/1lLvTg.png)
 
+[视频教程](https://www.bilibili.com/video/BV1g7411B7vY/)
+
 # 文件夹说明
 - src\ 存放代码文件
 - output\ 编译过程生成的文件
