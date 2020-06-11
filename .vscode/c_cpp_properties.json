@@ -26,9 +26,9 @@
             ],
             "cStandard": "c99",
             "compilerArgs": [
-                "\"${workspaceFolder}\"",
-                "\"${workspaceFolder}\\src\"",
-                "\"${workspaceFolder}\\environment\"",
+                "${workspaceFolder}",
+                "${workspaceFolder}\\src",
+                "${workspaceFolder}\\environment",
                 "main"
             ]
         }

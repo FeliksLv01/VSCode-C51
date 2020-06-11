@@ -8,9 +8,9 @@
             "type": "shell",
             "command": "${workspaceFolder}\\.vscode\\compile.bat",
             "args": [
-                "\"${workspaceFolder}\"",
-                "\"${workspaceFolder}\\src\"",
-                "\"${workspaceFolder}\\environment\"",
+                "${workspaceFolder}",
+                "${workspaceFolder}\\src",
+                "${workspaceFolder}\\environment",
                 "main"
             ],
             "group": {

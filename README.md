@@ -4,6 +4,10 @@ VSCode Keil C51工程模板
 
 [视频教程](https://www.bilibili.com/video/BV1g7411B7vY/)
 
+# 版本更新
+- 已修复文件路径带空格报错问题
+- 已修复路径参数带有引号的bug
+
 # 文件夹说明
 - src\ 存放代码文件
 - output\ 编译过程生成的文件
@@ -24,10 +28,10 @@ VSCode Keil C51工程模板
 ## 2、修改tasks.json
 ```json
   "args": [
-    "\"${workspaceFolder}\"",
-    "\"${workspaceFolder}\\src\"",
-    "\"${workspaceFolder}\\environment\"",
-    "main" 
+    "${workspaceFolder}",
+    "${workspaceFolder}\\src",
+    "${workspaceFolder}\\environment",
+    "main"
 ],
 ```
 主要修改第四个参数"main"，这个相当于Keil中的工程名
