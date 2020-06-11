@@ -10,6 +10,8 @@ VSCode Keil C51工程模板
 - environment\ 51启动文件和LIB静态连编文件
 
 # 修改说明
+**若出现路径报错的情况，请注意，不要直接在原路径上进行修改，建议删掉原报错路径后手动重新输入**
+
 ## 1、修改c_cpp_properties.json
 ```json
   "includePath": [

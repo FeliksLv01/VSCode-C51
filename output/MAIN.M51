@@ -1,0 +1,121 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    06/11/2020  09:44:22  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\PROGRAM FILES\KEIL5\C51\BIN\BL51.EXE C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB, MAIN.OBJ, STARTUP.OBJ, U
+>> ART.OBJ TO MAIN
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  MAIN.OBJ (MAIN)
+  STARTUP.OBJ (?C_STARTUP)
+  UART.OBJ (UART)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (?C_INIT)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (PRINTF)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (?C?CLDPTR)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (?C?CLDOPTR)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (?C?CSTPTR)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (?C?PLDIIDATA)
+  C:\USERS\13509\DESKTOP\VSCODE-C51\ENVIRONMENT\C51S.LIB (?C?CCASE)
+
+
+LINK MAP OF MODULE:  MAIN (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         _DATA_GROUP_
+                    001CH     0004H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+            BIT     0021H.1   0000H.1   UNIT         ?BI?MAIN
+                    0021H.2   0000H.6                *** GAP ***
+            IDATA   0022H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     035CH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    0B5CH     008EH     UNIT         ?C?LIB_CODE
+            CODE    0BEAH     008CH     UNIT         ?C_C51STARTUP
+            CODE    0C76H     0018H     UNIT         ?PR?UARTINIT?UART
+            CODE    0C8EH     0015H     UNIT         ?PR?MAIN?MAIN
+            CODE    0CA3H     0011H     UNIT         ?PR?_PUTCHAR?UART
+            CODE    0CB4H     000DH     UNIT         ?CO?MAIN
+            CODE    0CC1H     0003H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   MAIN (MAIN)
+
+
+SEGMENT                           BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH     START    LENGTH
+------------------------------------------------------------------
+?C_C51STARTUP                  -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  06/11/2020  09:44:22  PAGE 2
+
+
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                  -----    -----      -----    -----
+  +--> ?PR?UARTINIT?UART
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?PRINTF?PRINTF              0020H.0  0001H.1    0008H    0014H
+  +--> ?PR?_PUTCHAR?UART
+
+?PR?_PUTCHAR?UART              -----    -----      -----    -----
+  +--> ?PR?UARTINIT?UART
+
+
+
+SYMBOL TABLE OF MODULE:  MAIN (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PRINTF
+  D:0008H         PUBLIC        ?_PRINTF517?BYTE
+  D:0008H         PUBLIC        ?_PRINTF?BYTE
+  D:0008H         PUBLIC        ?_SPRINTF517?BYTE
+  D:0008H         PUBLIC        ?_SPRINTF?BYTE
+  C:0862H         PUBLIC        _PRINTF
+  C:0862H         PUBLIC        _PRINTF517
+  C:085CH         PUBLIC        _SPRINTF
+  C:085CH         PUBLIC        _SPRINTF517
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?CLDPTR
+  C:0B5CH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0B75H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0BA2H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0BB4H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0BC4H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 005CH BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=30.2 xdata=0 code=1223
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
