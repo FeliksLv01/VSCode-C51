@@ -2,7 +2,7 @@
 VSCode Keil C51工程模板
 ![VSCode-C51](https://s2.ax1x.com/2020/01/30/1lLvTg.png)
 
-[视频教程](https://www.bilibili.com/video/BV1g7411B7vY/)
+[视频教程](https://www.bilibili.com/video/BV1DA411v7Cv/)
 
 # 版本更新
 - 已修复文件路径带空格报错问题
