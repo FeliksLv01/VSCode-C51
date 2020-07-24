@@ -5,7 +5,7 @@ VSCode Keil C51工程模板
 [视频教程](https://www.bilibili.com/video/BV1DA411v7Cv/)
 
 # VSCode插件
-感谢[MoonAndHaze](https://github.com/MoonAndHaze)使用本模版开发了一个VSCode插件
+感谢[MoonAndHaze](https://github.com/MoonAndHaze)使用本模版开发了一个VSCode插件   
 插件项目地址:https://github.com/MoonAndHaze/C51ProjectGenerator
 
 # 版本更新
