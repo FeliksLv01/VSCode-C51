@@ -17,7 +17,7 @@ cd %~3
 move STARTUP.OBJ "%~1\output" > NUL
 move STARTUP.LST "%~1\output" > NUL
 
-if exist %3\C51S.LIB ( move "%~3\C51S.LIB" "%~1\output" > NUL)
+if not exist %1\output\C51S.LIB ( copy "%~3\C51S.LIB" "%~1\output" > NUL)
 
 cd %~1/output
 @setlocal enableextensions enabledelayedexpansion
@@ -28,6 +28,5 @@ for %%i in (*.OBJ) do (
 call "%KEIL_BIN_FOLDER%\BL51.EXE" %result% TO %4
 call "%KEIL_BIN_FOLDER%\OH51.EXE" "%~1\output\%4"
 
-
-echo Compiled successfully: output\%4.hex
+if exist %1\output\%4.hex ( echo Compilation completed: output\%4.hex )
 exit 0
