@@ -7,7 +7,7 @@ echo compiling....
 cd %~2
 for %%i in (*.c) do ( 
     echo %%i
-    call "%KEIL_BIN_FOLDER%\C51.EXE" %%i
+    call "%KEIL_BIN_FOLDER%\C51.EXE" %%i >> %~1/.vscode/compile.log
 )
 for %%i in (*.LST) do ( move %%i "%~1\output" > NUL )
 for %%i in (*.OBJ) do ( move %%i "%~1\output" > NUL )
@@ -25,8 +25,8 @@ set result=C51S.LIB
 for %%i in (*.OBJ) do (
     set result=!result!,%%i
 )
-call "%KEIL_BIN_FOLDER%\BL51.EXE" %result% TO %4
-call "%KEIL_BIN_FOLDER%\OH51.EXE" "%~1\output\%4"
+call "%KEIL_BIN_FOLDER%\BL51.EXE" %result% TO %4 >> %~1/.vscode/compile.log
+call "%KEIL_BIN_FOLDER%\OH51.EXE" "%~1\output\%4" >> %~1/.vscode/compile.log
 
 if exist %1\output\%4.hex ( echo Compilation completed: output\%4.hex )
 exit 0
