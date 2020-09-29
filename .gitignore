@@ -35,6 +35,11 @@
 *.i*86
 *.x86_64
 *.hex
+*.OBJ
+*.LST
+*.M51
+*.LIB
+MAIN
 
 # Debug files
 *.dSYM/
@@ -50,4 +55,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-output/
