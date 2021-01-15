@@ -1,13 +1,13 @@
-@echo off
-set KEIL_BIN_FOLDER=D:\Program Files\Keil5\C51\BIN
 cls
+@echo off
+set KEIL_BIN_FOLDER=C:\Keil_v5\C51\BIN
 echo author:kcqnly
 echo compiling....
 
 if not exist %~1\build ( 
     mkdir %~1\build 
-    mkdir %~1\build\Listing 
-    mkdir %~1\build\Obj 
+    mkdir %~1\build\Listings 
+    mkdir %~1\build\Objects 
 )
 
 cd %~2
@@ -23,7 +23,7 @@ cd %~3
 move STARTUP.OBJ %~1\build > NUL || goto error
 move STARTUP.LST %~1\build > NUL || goto error
 
-if not exist %1\output\C51S.LIB ( copy "%~3\C51S.LIB" "%~1\build" > NUL) || goto error
+if not exist %~1\output\C51S.LIB ( copy "%~3\C51S.LIB" "%~1\build" > NUL) || goto error
 
 cd %~1\build
 @setlocal enableextensions enabledelayedexpansion
@@ -33,8 +33,9 @@ for %%i in (*.OBJ) do (
 )
 call "%KEIL_BIN_FOLDER%\BL51.EXE" %result% TO %4 >> "%~1\build\compile.log" || goto error
 call "%KEIL_BIN_FOLDER%\OH51.EXE" "%~1\build\%4" >> "%~1\build\compile.log" || goto error
-for %%i in (*.LST) do ( move %%i %~1\build\Listing > NUL || goto error )
-for %%i in (*.OBJ) do ( move %%i %~1\build\Obj > NUL || goto error)
+for %%i in (*.LST) do ( move %%i %~1\build\Listings > NUL || goto error )
+for %%i in (*.OBJ) do ( move %%i %~1\build\Objects > NUL || goto error)
+for %%i in (*.M51) do ( move %%i %1\build\Listings > NUL || goto error)
 if exist %~1\build\%4.hex ( echo Compilation completed: build\%4.hex )
 exit 0
 
