@@ -18,7 +18,7 @@ VSCode Keil C51工程模板
 ## 文件夹说明
 
 - src\ 存放代码文件
-- output\ 编译过程生成的文件
+- build\ 编译过程生成的文件
 - environment\ 51启动文件和LIB静态连编文件
 
 ## 修改说明
